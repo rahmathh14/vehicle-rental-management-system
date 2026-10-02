@@ -1,0 +1,816 @@
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f6f9;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.custom-navbar {
+  background: #6c757d;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: white !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #e9ecef !important;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero-section {
+  background: #e9ecef;
+  padding: 70px 0;
+}
+
+.hero-section h1 {
+  font-weight: bold;
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn {
+  border-radius: 8px;
+}
+
+.btn-dark {
+  background: #212529;
+}
+
+.btn-dark:hover {
+  background: #000;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: .3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* ===========================
+   LOGIN
+=========================== */
+
+.login-card {
+  width: 420px;
+  border-radius: 15px;
+  border: none;
+}
+
+.login-card input {
+  border-radius: 8px;
+}
+
+.login-card button {
+  border-radius: 8px;
+}
+
+/* ===========================
+   REGISTER
+=========================== */
+
+.register-card {
+  width: 500px;
+  border-radius: 15px;
+  border: none;
+}
+
+.register-card input {
+  border-radius: 8px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+  background: #495057;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 70px;
+}
+
+/* ===========================
+   ADMIN LAYOUT
+=========================== */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 250px;
+  background: #343a40;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 25px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.sidebar ul {
+  padding: 20px;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.sidebar a:hover {
+  background: #495057;
+}
+
+.logout-btn {
+  margin: 20px;
+  padding: 12px;
+  background: #dc3545;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #bb2d3b;
+}
+
+/* Main */
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+.header {
+  height: 70px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Content */
+
+.content {
+  padding: 30px;
+}
+
+/* ===========================
+   DASHBOARD CARDS
+=========================== */
+
+.dashboard-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+}
+
+.dashboard-card h5 {
+  color: #6c757d;
+}
+
+.dashboard-card h2 {
+  margin-top: 15px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* ===========================
+   RECENT BOOKINGS
+=========================== */
+
+.table-section {
+  margin-top: 40px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+
+  .sidebar {
+    width: 220px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .header {
+    padding: 15px;
+  }
+
+}
+.dashboard-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+  transition: 0.3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+.dashboard-card h5 {
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.dashboard-card h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.table-section {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+/* Booking Table */
+
+.table-card{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    margin-top:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.table thead{
+    background:#343a40;
+    color:white;
+}
+
+.table tbody tr:hover{
+    background:#f8f9fa;
+}
+.table{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.table th{
+    text-align:center;
+}
+
+.table td{
+    vertical-align:middle;
+    text-align:center;
+}
+
+.table tbody tr:hover{
+    background:#f8f9fa;
+}
+.add-card{
+    width:600px;
+    margin:auto;
+    border-radius:15px;
+}
+
+
+.form-control{
+    border-radius:10px;
+    padding:12px;
+}
+
+
+.card h2{
+    font-weight:bold;
+}
+
+/* ==================================================
+   VEHICLE MANAGEMENT
+================================================== */
+
+.vehicle-page {
+    min-height: calc(100vh - 70px);
+    padding: 40px;
+    background: #f4f6f9;
+}
+
+/* ---------------- FORM CARD ---------------- */
+
+.vehicle-form-card {
+    width: 100%;
+    max-width: 650px;
+    margin: 10px auto;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.vehicle-form-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #edf0f2;
+}
+
+.vehicle-form-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f3f5;
+    border-radius: 14px;
+    font-size: 27px;
+}
+
+.vehicle-form-header h2 {
+    margin: 0;
+    font-size: 27px;
+    color: #343a40;
+    font-weight: 700;
+}
+
+.vehicle-form-header p {
+    margin-top: 5px;
+    color: #868e96;
+    font-size: 14px;
+}
+
+/* ---------------- FORM FIELDS ---------------- */
+
+.vehicle-form-group {
+    margin-bottom: 22px;
+}
+
+.vehicle-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #495057;
+}
+
+.vehicle-form-group input,
+.vehicle-form-group select {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #dfe3e7;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #343a40;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.vehicle-form-group input::placeholder {
+    color: #adb5bd;
+}
+
+.vehicle-form-group input:focus,
+.vehicle-form-group select:focus {
+    border-color: #6c757d;
+    box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.12);
+}
+
+/* ---------------- PRICE ---------------- */
+
+.price-input {
+    position: relative;
+}
+
+.price-input span {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6c757d;
+    z-index: 1;
+}
+
+.price-input input {
+    padding-left: 35px;
+}
+
+/* ---------------- PRIMARY BUTTON ---------------- */
+
+.vehicle-primary-btn {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 9px;
+    background: #343a40;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.vehicle-primary-btn:hover {
+    background: #212529;
+    transform: translateY(-1px);
+}
+
+/* ---------------- EDIT FORM BUTTONS ---------------- */
+
+.vehicle-form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.vehicle-form-actions .vehicle-primary-btn {
+    flex: 1;
+}
+
+.vehicle-cancel-btn {
+    flex: 1;
+    height: 48px;
+    border: none;
+    border-radius: 9px;
+    background: #e9ecef;
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.vehicle-cancel-btn:hover {
+    background: #dee2e6;
+}
+
+/* ==================================================
+   VIEW VEHICLES
+================================================== */
+
+.vehicle-list-page {
+    min-height: calc(100vh - 70px);
+    padding: 35px;
+    background: #f4f6f9;
+}
+
+.vehicle-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.vehicle-list-header h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #343a40;
+}
+
+.vehicle-list-header p {
+    margin-top: 6px;
+    color: #868e96;
+    font-size: 14px;
+}
+
+/* ---------------- VEHICLE CARDS ---------------- */
+
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 22px;
+}
+
+.vehicle-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+    transition: 0.25s ease;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.11);
+}
+
+.vehicle-card-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f3f5;
+    border-radius: 12px;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.vehicle-card h3 {
+    margin-bottom: 6px;
+    color: #343a40;
+    font-size: 20px;
+}
+
+.vehicle-card-type {
+    color: #868e96;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.vehicle-card-price {
+    font-size: 23px;
+    font-weight: 700;
+    color: #212529;
+}
+
+.vehicle-card-price small {
+    color: #868e96;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/* ---------------- VIEW ACTIONS ---------------- */
+
+.vehicle-card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.vehicle-edit-btn,
+.vehicle-delete-btn {
+    flex: 1;
+    height: 42px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.vehicle-edit-btn {
+    border: 1px solid #dee2e6;
+    background: #f8f9fa;
+    color: #343a40;
+}
+
+.vehicle-edit-btn:hover {
+    background: #e9ecef;
+}
+
+.vehicle-delete-btn {
+    border: 1px solid #ffd8d8;
+    background: #fff5f5;
+    color: #c92a2a;
+}
+
+.vehicle-delete-btn:hover {
+    background: #ffe3e3;
+}
+
+/* ---------------- ADD BUTTON ---------------- */
+
+.vehicle-add-btn {
+    width: auto;
+    padding: 0 22px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 768px) {
+
+    .vehicle-page,
+    .vehicle-list-page {
+        padding: 20px;
+    }
+
+    .vehicle-form-card {
+        padding: 25px;
+    }
+
+    .vehicle-list-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .vehicle-form-actions {
+        flex-direction: column;
+    }
+
+    .vehicle-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================================================
+   BOOKING / RETURN / ABOUT
+================================================== */
+
+.about-page {
+    min-height: calc(100vh - 70px);
+    padding: 50px 30px;
+    background: #f4f6f9;
+}
+
+.about-card {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 18px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.about-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f3f5;
+    border-radius: 16px;
+    font-size: 35px;
+}
+
+.about-card h1 {
+    color: #343a40;
+    margin-bottom: 12px;
+}
+
+.about-intro {
+    color: #6c757d;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.about-section {
+    text-align: left;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.about-section h3 {
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    color: #6c757d;
+    line-height: 1.7;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.about-feature {
+    padding: 22px;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+}
+
+.about-feature span {
+    font-size: 28px;
+}
+
+.about-feature h4 {
+    margin: 12px 0 8px;
+    color: #343a40;
+}
+
+.about-feature p {
+    color: #868e96;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+
+    .about-card {
+        padding: 30px 20px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+}
